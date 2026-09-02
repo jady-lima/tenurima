@@ -31,6 +31,14 @@
   --color-order-button-border: #116800;
 
   /* --------------------------------------------------------------------
+     Hero
+     -------------------------------------------------------------------- */
+  --color-hero-description: #CECECE;
+  --gradient-hero-highlight: linear-gradient(90deg, #CC494A 0%, #FF4848 100%);
+  --color-hero-card-bg: #6C2D3933;
+  --color-hero-card-border: #FFFFFF33;
+
+  /* --------------------------------------------------------------------
      Raio / bordas de componentes recorrentes
      -------------------------------------------------------------------- */
   --radius-pill: 50px;
@@ -102,6 +110,24 @@
   --text-semibold-weight: 600;
   --text-semibold-size: 18px;
   --text-semibold-line-height: 100%;
+
+  /* Descrição do Hero */
+  --text-hero-description-font: var(--font-primary);
+  --text-hero-description-weight: 400;
+  --text-hero-description-size: 18px;
+  --text-hero-description-line-height: 100%;
+
+  /* Texto de garantia (após o botão Order Now) */
+  --text-hero-guarantee-font: var(--font-primary);
+  --text-hero-guarantee-weight: 500;
+  --text-hero-guarantee-size: 16px;
+  --text-hero-guarantee-line-height: 130%;
+
+  /* Texto do botão Order Now */
+  --text-order-button-font: var(--font-secondary);
+  --text-order-button-weight: 600;
+  --text-order-button-size: 24px;
+  --text-order-button-line-height: 100%;
 
   /* Quantidade de bottles nos cards de venda */
   --text-bottles-font: var(--font-primary);
