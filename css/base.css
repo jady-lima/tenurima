@@ -595,6 +595,125 @@ h3 {
 }
 
 /* ==========================================================================
+   Ingredients — estrutura base (desktop de referência: 1920px)
+   ========================================================================== */
+
+.ingredients {
+  padding-block: 80px;
+}
+
+.ingredients-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.ingredients-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+  max-width: 435px;
+  text-align: center;
+}
+
+.ingredients-label {
+  font-family: var(--text-auxiliary-font);
+  font-weight: var(--text-auxiliary-weight);
+  font-size: var(--text-auxiliary-size);
+  line-height: var(--text-auxiliary-line-height);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #A93F48;
+}
+
+.ingredients-intro h2 {
+  color: #44000C;
+}
+
+.ingredients-title-highlight {
+  color: #CC494A;
+}
+
+.ingredients-list {
+  display: grid;
+  grid-template-columns: repeat(3, 385px);
+  justify-content: center;
+  gap: 40px;
+}
+
+.ingredient-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-24);
+  width: 385px;
+  height: 310px;
+  padding: 80px var(--space-40) var(--space-40);
+  border-radius: var(--radius-card);
+  background: #F4F4F4;
+  border-bottom: 2px solid #FF1F1F;
+}
+
+.ingredient-socket {
+  position: absolute;
+  top: -2px;
+  left: 77px;
+  width: 231px;
+  height: 64px;
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ingredient-card img:not(.ingredient-socket) {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 88px;
+  height: 88px;
+  border-width: 0;
+}
+
+.ingredient-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+  max-width: 305px;
+  text-align: center;
+}
+
+.ingredient-content h3 {
+  color: #CC494A;
+}
+
+.ingredient-content p {
+  font-family: var(--text-ingredients-font);
+  font-weight: var(--text-ingredients-weight);
+  font-size: var(--text-ingredients-size);
+  line-height: var(--text-ingredients-line-height);
+  letter-spacing: 0;
+  color: #736467;
+}
+
+@media (max-width: 900px) {
+  .ingredients-list {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+
+  .ingredient-card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 
