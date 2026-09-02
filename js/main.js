@@ -66,3 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   update();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".info-footer-track").forEach((track) => {
+    const footer = track.parentElement;
+    const originalNodes = Array.from(track.children);
+
+    if (originalNodes.length === 0) return;
+
+    while (track.scrollWidth < footer.clientWidth) {
+      originalNodes.forEach((node) => track.appendChild(node.cloneNode(true)));
+    }
+
+    Array.from(track.children).forEach((node) => track.appendChild(node.cloneNode(true)));
+  });
+});
