@@ -1,8 +1,199 @@
+/* ==========================================================================
+   Font faces
+   ========================================================================== */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
 body {
-  font-family: sans-serif;
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-default);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1 {
+  font-family: var(--text-h1-font);
+  font-weight: var(--text-h1-weight);
+  font-size: var(--text-h1-size);
+  line-height: var(--text-h1-line-height);
+}
+
+h2 {
+  font-family: var(--text-h2-font);
+  font-weight: var(--text-h2-weight);
+  font-size: var(--text-h2-size);
+  line-height: var(--text-h2-line-height);
+}
+
+h3 {
+  font-family: var(--text-h3-font);
+  font-weight: var(--text-h3-weight);
+  font-size: var(--text-h3-size);
+  line-height: var(--text-h3-line-height);
+  text-align: center;
+}
+
+/* ==========================================================================
+   Container
+   ========================================================================== */
+
+.container {
+  width: min(100% - (2 * var(--container-padding)), var(--container-max-width));
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   Estrelas (avaliação)
+   ========================================================================== */
+
+.stars {
+  color: var(--color-star);
+}
+
+/* ==========================================================================
+   Fita informativa (ticker de garantias)
+   ========================================================================== */
+
+.info-footer {
+  background-color: var(--color-bg-ribbon);
+}
+
+/* ==========================================================================
+   Backgrounds por seção
+   ========================================================================== */
+
+.hero {
+  background-color: var(--color-bg-hero);
+}
+
+.about {
+  background-color: var(--color-bg-about);
+}
+
+.ingredients {
+  background-color: var(--color-bg-ingredients);
+}
+
+.why-choose {
+  background-color: var(--color-bg-why-choose);
+}
+
+.testimonials {
+  background-color: var(--color-bg-testimonials);
+}
+
+.delivery {
+  background-color: var(--color-bg-delivery);
+}
+
+.pricing {
+  background-color: var(--color-bg-pricing);
+}
+
+.faq {
+  background-color: var(--color-bg-faq);
+}
+
+.footer {
+  background-color: var(--color-bg-footer);
+}
+
+.copyright-info {
+  background-color: var(--color-bg-footer-copyright);
+}
+
+/* ==========================================================================
+   Header — estrutura base (desktop de referência: 1920px)
+   ========================================================================== */
+
+.header {
+  padding-block: var(--space-24);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-24);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8.52px;
+  font-family: var(--text-logo-font);
+  font-weight: var(--text-logo-weight);
+  font-size: var(--text-logo-size);
+  line-height: var(--text-logo-line-height);
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-40);
+}
+
+.navigation a {
+  font-family: var(--text-nav-font);
+  font-weight: var(--text-nav-weight);
+  font-size: var(--text-nav-size);
+  line-height: var(--text-nav-line-height);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-16) var(--space-24);
+  border: var(--border-width-default) solid;
+  border-radius: var(--radius-pill);
+}
+
+/* ==========================================================================
+   Footer — quebra da navegação em mobile
+   ========================================================================== */
+
+.footer nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
 }

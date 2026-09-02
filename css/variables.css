@@ -1,0 +1,129 @@
+:root {
+  /* --------------------------------------------------------------------
+     Fontes
+     -------------------------------------------------------------------- */
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+
+  /* --------------------------------------------------------------------
+     Cores — Backgrounds por seção
+     -------------------------------------------------------------------- */
+  --color-bg-default: #FFFFFF;
+  --color-bg-hero: #150005;
+  --color-bg-about: #F4F4F4;
+  --color-bg-ingredients: #FFFFFF;
+  --color-bg-why-choose: #150005;
+  --color-bg-ribbon: #FF2D2D;
+  --color-bg-testimonials: #F4F4F4;
+  --color-bg-delivery: #150005;
+  --color-bg-pricing: #FFFFFF;
+  --color-bg-guarantee: #F4F4F4;
+  --color-bg-faq: #150005;
+  --color-bg-footer: #44000C;
+  --color-bg-footer-copyright: #150005;
+
+  --color-star: #FFDC13;
+
+  /* --------------------------------------------------------------------
+     Botão Order
+     -------------------------------------------------------------------- */
+  --gradient-order-button: linear-gradient(180deg, #35F60F 0%, #1FA604 100%);
+  --color-order-button-border: #116800;
+
+  /* --------------------------------------------------------------------
+     Raio / bordas de componentes recorrentes
+     -------------------------------------------------------------------- */
+  --radius-pill: 50px;
+  --radius-card: 20px;
+  --border-width-default: 1px;
+
+  /* --------------------------------------------------------------------
+     Spacing
+     -------------------------------------------------------------------- */
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-40: 40px;
+  --space-component-lg: 104px;
+
+  /* --------------------------------------------------------------------
+     Container / layout base
+     Referência: frame desktop 1920px.
+     -------------------------------------------------------------------- */
+  --container-max-width: 1320px;
+  --container-padding: var(--space-24);
+
+  /* --------------------------------------------------------------------
+     Tipografia
+     -------------------------------------------------------------------- */
+
+  /* H1 */
+  --text-h1-font: var(--font-primary);
+  --text-h1-weight: 700;
+  --text-h1-size: 40px;
+  --text-h1-line-height: 130%;
+
+  /* H2 */
+  --text-h2-font: var(--font-primary);
+  --text-h2-weight: 600;
+  --text-h2-size: 36px;
+  --text-h2-line-height: 130%;
+
+  /* H3 */
+  --text-h3-font: var(--font-primary);
+  --text-h3-weight: 600;
+  --text-h3-size: 24px;
+  --text-h3-line-height: 130%;
+
+  /* H4 / textos dos benefícios */
+  --text-h4-font: var(--font-secondary);
+  --text-h4-weight: 500;
+  --text-h4-size: 20px;
+  --text-h4-line-height: 26px;
+
+  /* Texto de ingredientes */
+  --text-ingredients-font: var(--font-primary);
+  --text-ingredients-weight: 500;
+  --text-ingredients-size: 16px;
+  --text-ingredients-line-height: 130%;
+
+  /* Textos auxiliares */
+  --text-auxiliary-font: var(--font-primary);
+  --text-auxiliary-weight: 500;
+  --text-auxiliary-size: 18px;
+  --text-auxiliary-line-height: 100%;
+
+  /* Texto semibold identificado */
+  --text-semibold-font: var(--font-primary);
+  --text-semibold-weight: 600;
+  --text-semibold-size: 18px;
+  --text-semibold-line-height: 100%;
+
+  /* Quantidade de bottles nos cards de venda */
+  --text-bottles-font: var(--font-primary);
+  --text-bottles-weight: 700;
+  --text-bottles-size: 40px;
+  --text-bottles-line-height: 100%;
+
+  /* Subtítulos de quantidade de dias */
+  --text-days-font: var(--font-secondary);
+  --text-days-weight: 500;
+  --text-days-size: 20px;
+  --text-days-line-height: 26px;
+
+  /* Navegação do header */
+  --text-nav-font: var(--font-primary);
+  --text-nav-weight: 500;
+  --text-nav-size: 20px;
+  --text-nav-line-height: 26px;
+
+  /* Texto do logo */
+  --text-logo-font: var(--font-primary);
+  --text-logo-weight: 600;
+  --text-logo-size: 33.95px;
+  --text-logo-line-height: 100%;
+}
