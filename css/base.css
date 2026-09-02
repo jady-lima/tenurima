@@ -108,7 +108,22 @@ h3 {
    ========================================================================== */
 
 .info-footer {
+  overflow: hidden;
+  padding-block: var(--space-16);
   background-color: var(--color-bg-ribbon);
+  backdrop-filter: blur(17.4047px);
+  -webkit-backdrop-filter: blur(17.4047px);
+}
+
+.info-footer p {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -710,6 +725,153 @@ h3 {
   .ingredient-card {
     width: 100%;
     height: auto;
+  }
+}
+
+/* ==========================================================================
+   Why Choose — estrutura base (desktop de referência: 1920px)
+   ========================================================================== */
+
+.why-choose {
+  --container-max-width: 1600px;
+  padding-top: 24px;
+}
+
+.why-choose-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: -110px;
+}
+
+.why-choose .info-footer {
+  position: relative;
+  z-index: 2;
+}
+
+.why-choose-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+  max-width: 560px;
+  text-align: center;
+}
+
+.why-choose-label {
+  font-family: var(--text-auxiliary-font);
+  font-weight: var(--text-auxiliary-weight);
+  font-size: var(--text-auxiliary-size);
+  line-height: var(--text-auxiliary-line-height);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #CECECE;
+}
+
+.why-choose-intro h2 {
+  color: #FFFFFF;
+}
+
+.why-choose-composition {
+  display: grid;
+  grid-template-columns: 400px minmax(280px, 489.49px) 400px;
+  align-items: start;
+  justify-content: center;
+  gap: var(--space-16);
+  width: 100%;
+}
+
+.why-choose-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  width: 100%;
+  max-width: 400px;
+  margin-top: 147.74px;
+}
+
+.why-choose-benefit {
+  display: flex;
+  width: 100%;
+  padding: var(--space-12) var(--space-24);
+  border-radius: var(--radius-pill);
+  border: var(--border-width-default) solid var(--color-hero-card-border);
+  background: var(--color-hero-card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.why-choose-benefit-content {
+  display: flex;
+  align-items: center;
+  gap: 16.22px;
+  width: 100%;
+}
+
+.why-choose-benefit-content img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.why-choose-benefit-content h4 {
+  font-family: var(--text-h4-font);
+  font-weight: var(--text-h4-weight);
+  font-size: var(--text-h4-size);
+  line-height: var(--text-h4-line-height);
+  letter-spacing: 0;
+  color: #FFFFFF;
+}
+
+.why-choose-media {
+  position: relative;
+  width: 100%;
+  max-width: 489.49px;
+  aspect-ratio: 489.49 / 695.94;
+  margin-inline: auto;
+}
+
+.why-choose-product {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 489.49 / 571.48;
+  object-fit: contain;
+}
+
+.why-choose-podium {
+  position: absolute;
+  z-index: 1;
+  top: 38.45%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94.4%;
+  aspect-ratio: 462 / 407.48;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+  .why-choose-composition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-24);
+  }
+
+  .why-choose-benefits {
+    margin-top: 0;
+  }
+
+  .why-choose-media {
+    order: 3;
+  }
+
+  .why-choose-container {
+    margin-bottom: -110px;
   }
 }
 
