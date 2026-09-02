@@ -1201,6 +1201,79 @@ h3 {
 }
 
 /* ==========================================================================
+   Delivery — estrutura base (desktop de referência: 1920px)
+   ========================================================================== */
+
+.delivery-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  width: min(100% - (2 * var(--container-padding)), 848px);
+  margin-inline: auto;
+  padding-block: 48px;
+}
+
+.delivery-badge {
+  flex: none;
+  width: 156px;
+  height: 156px;
+}
+
+.delivery-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-16);
+  flex: 1;
+  max-width: 628px;
+  text-align: left;
+}
+
+.delivery-text h2 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 0;
+  color: #CC494A;
+}
+
+.delivery-highlight {
+  color: #FFFFFF;
+}
+
+.delivery-text p {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .delivery-content {
+    flex-direction: column;
+    gap: 24px;
+    padding-block: 40px;
+  }
+
+  .delivery-text {
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .delivery-text p {
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 
