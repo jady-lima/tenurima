@@ -81,3 +81,33 @@ document.addEventListener("DOMContentLoaded", () => {
     Array.from(track.children).forEach((node) => track.appendChild(node.cloneNode(true)));
   });
 });
+
+function supportsExclusiveDetails() {
+  const a = document.createElement("details");
+  const b = document.createElement("details");
+  a.name = b.name = "__exclusive-details-test__";
+  document.body.append(a, b);
+  a.open = true;
+  b.open = true;
+  const supported = !a.open;
+  a.remove();
+  b.remove();
+  return supported;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (supportsExclusiveDetails()) return;
+
+  document.querySelectorAll(".faq-list").forEach((list) => {
+    const items = Array.from(list.querySelectorAll(".faq-item"));
+
+    items.forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+        items.forEach((other) => {
+          if (other !== item) other.open = false;
+        });
+      });
+    });
+  });
+});
