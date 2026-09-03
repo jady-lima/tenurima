@@ -1152,7 +1152,65 @@ h3 {
 
 .why-choose {
   --container-max-width: 1600px;
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
   padding-top: 24px;
+}
+
+.why-choose-divisor {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.why-choose-luzes {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.why-choose-luzes--mobile {
+  display: none;
+}
+
+.why-choose-texture {
+  position: absolute;
+  z-index: -1;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.why-choose-texture--left {
+  top: 0;
+  left: -4.8%;
+  width: 51.5%;
+  height: 100%;
+}
+
+.why-choose-texture--right {
+  top: 0;
+  left: 45.8%;
+  width: 56.5%;
+  height: 100%;
+}
+
+.why-choose-texture--mobile {
+  display: none;
 }
 
 .why-choose-container {
@@ -1216,8 +1274,8 @@ h3 {
   border-radius: var(--radius-pill);
   border: var(--border-width-default) solid var(--color-hero-card-border);
   background: var(--color-hero-card-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .why-choose-benefit-content {
@@ -1272,6 +1330,50 @@ h3 {
   pointer-events: none;
 }
 
+.why-choose-glow {
+  position: absolute;
+  z-index: 0;
+  top: -4%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  aspect-ratio: 608 / 698;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.why-choose-rings {
+  position: absolute;
+  z-index: 0;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  aspect-ratio: 649.581 / 578.377;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.why-choose-pill {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  width: 18%;
+  aspect-ratio: 178 / 184;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.why-choose-pill-1 {
+  top: 22%;
+  left: 65.5%;
+}
+
+.why-choose-pill-2 {
+  top: 52.5%;
+  left: 15.8%;
+}
+
 @media (max-width: 1200px) {
   .why-choose-composition {
     display: flex;
@@ -1286,6 +1388,35 @@ h3 {
 
   .why-choose-media {
     order: 3;
+  }
+
+  .why-choose-pill {
+    display: block;
+  }
+
+  .why-choose-divisor {
+    display: none;
+  }
+
+  .why-choose-luzes--desktop {
+    display: none;
+  }
+
+  .why-choose-luzes--mobile {
+    display: block;
+  }
+
+  .why-choose-texture--left,
+  .why-choose-texture--right {
+    display: none;
+  }
+
+  .why-choose-texture--mobile {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .why-choose-container {
