@@ -392,28 +392,30 @@
     </section>
 
     <section id="pricing" class="pricing">
-      <h2>Order Your Tenurima</h2>
-      <span>Select the package that fits your goals and save more:</span>
+      <div class="pricing-intro">
+        <h2>Order Your <span class="pricing-title-highlight">Tenurima</span></h2>
+        <span class="pricing-subtitle">Select the package that fits your goals and save more:</span>
+      </div>
 
       <div class="pricing-list">
-        <article class="pricing-card">
+        <article class="pricing-card pricing-card--basic">
           <h3>Basic</h3>
           <p class="pricing-bottles">2 BOTTLES</p>
           <p class="pricing-supply">60 Day Supply</p>
 
-          <img src="assets/images/about/tenurima.png" alt="Imagem do produto Tenurima">
-          <p class="pricing-price-per-bottle">$79.98/Bottle</p>
+          <img src="assets/images/pricing/basic.svg" alt="Imagem do produto Tenurima">
+          <p class="pricing-price-per-bottle"><span class="price-main">$79</span><span class="price-decimals"><span class="price-cents">.98</span><span class="price-unit">/Bottle</span></span></p>
 
           <ul class="pricing-benefits">
-            <li>FREE BONUS!</li>
-            <li>FAST SHIPPING</li>
-            <li>FREE SHIPPING</li>
+            <li><img src="assets/icons/verified-red.svg" alt="Verificado">FREE BONUS!</li>
+            <li><img src="assets/icons/verified-red.svg" alt="Verificado">FAST SHIPPING</li>
+            <li><img src="assets/icons/verified-red.svg" alt="Verificado">FREE SHIPPING</li>
           </ul>
 
-          <button type="button"><img src="assets/images/pricing/buy-now.png" alt="Comprar Agora"></button>
+          <button type="button"><img src="assets/images/pricing/buy-now-crop.png" alt="Comprar Agora"></button>
 
           <img src="assets/images/pricing/cards.png" alt="Cartões aceitos" class="pricing-cards">
-          <p class="pricing-total-info">TOTAL: $358  $159.96</p>
+          <p class="pricing-total-info">TOTAL: <span class="pricing-total-old">$358</span> $159.96</p>
         </article>
 
         <article class="pricing-card pricing-card--popular">
@@ -421,8 +423,8 @@
           <p class="pricing-bottles">6 BOTTLES</p>
           <p class="pricing-supply">180 Day Supply</p>
 
-          <img src="assets/images/about/tenurima.png" alt="Imagem do produto Tenurima">
-          <p class="pricing-price-per-bottle">$49.98/Bottle</p>
+          <img src="assets/images/pricing/most-popular.svg" alt="Imagem do produto Tenurima">
+          <p class="pricing-price-per-bottle"><span class="price-main">$49</span><span class="price-decimals"><span class="price-cents">.98</span><span class="price-unit">/Bottle</span></span></p>
 
           <ul class="pricing-benefits">
             <li><img src="assets/icons/verified.svg" alt="Verificado">2 FREE BONUSES!</li>
@@ -430,20 +432,20 @@
             <li><img src="assets/icons/verified.svg" alt="Verificado">60 DAYS GUARANTEE</li>
           </ul>
 
-          <button type="button"><img src="assets/images/pricing/buy-now.png" alt="Comprar Agora"></button>
+          <button type="button"><img src="assets/images/pricing/buy-now-crop.png" alt="Comprar Agora"></button>
 
           <img src="assets/images/pricing/cards.png" alt="Cartões aceitos" class="pricing-cards">
-          <p class="pricing-total-info">TOTAL: $1074  $299.88</p>
+          <p class="pricing-total-info">TOTAL: <span class="pricing-total-old">$1074</span> $299.88</p>
         </article>
 
-        <article class="pricing-card">
+        <article class="pricing-card pricing-card--bundle">
           <h3>Bundle</h3>
           <p class="pricing-bottles">3 BOTTLES</p>
           <p class="pricing-supply">90 Day Supply</p>
 
-          <img src="assets/images/about/tenurima.png" alt="Mockup Tenurima">
+          <img src="assets/images/pricing/bundle.svg" alt="Mockup Tenurima">
 
-          <p class="pricing-price-per-bottle">$99.98/Bottle</p>
+          <p class="pricing-price-per-bottle"><span class="price-main">$99</span><span class="price-decimals"><span class="price-cents">.98</span><span class="price-unit">/Bottle</span></span></p>
 
           <ul class="pricing-benefits">
             <li> <img src="assets/icons/verified-yellow.svg" alt="Verificado">1 FREE BONUS!</li>
@@ -451,21 +453,27 @@
             <li> <img src="assets/icons/verified.svg" alt="Verificado">60 DAYS GUARANTEE</li>
           </ul>
 
-          <button type="button"><img src="assets/images/pricing/buy-now.png" alt="Comprar Agora"></button>
+          <button type="button"><img src="assets/images/pricing/buy-now-crop.png" alt="Comprar Agora"></button>
 
           <img src="assets/images/pricing/cards.png" alt="Cartões aceitos" class="pricing-cards">
-          <p class="pricing-total-info">TOTAL: $537  $209.94</p>
+          <p class="pricing-total-info">TOTAL: <span class="pricing-total-old">$537</span> $209.94</p>
         </article>
       </div>
 
       <div class="satisfaction-badge">
-        <img src="assets/icons/selo.svg" alt="Selo de satisfação">
-        <h3 class="satisfaction-title">100% SATISFACTION GUARANTEED</h3>
-        <p class="satisfaction-text">Your purchase is protected by our 60-Day Satisfaction Promise from the original purchase date. If you're not satisfied with your experience, simply contact us through this link to our Contact Page, and our team will make it right.</p>
-        <a href="#pricing">
-          <img src="assets/icons/order-now.svg" alt="Ícone de carrinho">
-          Order Now
-        </a>
+        <img class="satisfaction-image" src="assets/icons/selo.svg" alt="Selo de satisfação">
+
+        <div class="satisfaction-content">
+          <div class="satisfaction-copy">
+            <h3 class="satisfaction-title">100% SATISFACTION GUARANTEED</h3>
+            <p class="satisfaction-text">Your purchase is protected by our 60-Day Satisfaction Promise from the original purchase date. If you're not satisfied with your experience, simply contact us through this link to our Contact Page, and our team will make it right.</p>
+          </div>
+
+          <a href="#pricing" class="btn-order">
+            <img src="assets/icons/order-now.svg" alt="Ícone de carrinho">
+            Order Now
+          </a>
+        </div>
       </div>
     </section>
 
