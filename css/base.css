@@ -1514,6 +1514,12 @@ h3 {
 
 .testimonials-viewport {
   overflow: hidden;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.testimonials-viewport.is-dragging {
+  cursor: grabbing;
 }
 
 .testimonials-track {
@@ -1521,6 +1527,15 @@ h3 {
   gap: 32px;
   transition: transform 0.4s ease;
   will-change: transform;
+}
+
+.testimonials-track.is-dragging {
+  transition: none;
+}
+
+.testimonials-slide {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .testimonials-slide {

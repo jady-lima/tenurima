@@ -64,6 +64,81 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", update);
 
+  let isDragging = false;
+  let dragMoved = false;
+  let dragStartX = 0;
+  let dragStartOffset = 0;
+  let activePointerId = null;
+
+  function getCurrentOffset() {
+    if (peekModeQuery.matches) {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      const inset = Math.max((viewport.clientWidth - slideWidth) / 2, 0);
+      return Math.min(Math.max(index * getStep() - inset, 0), getMaxOffset());
+    }
+    return offset;
+  }
+
+  function onPointerDown(e) {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+
+    isDragging = true;
+    dragMoved = false;
+    dragStartX = e.clientX;
+    dragStartOffset = getCurrentOffset();
+    activePointerId = e.pointerId;
+
+    viewport.classList.add("is-dragging");
+    track.classList.add("is-dragging");
+    viewport.setPointerCapture(e.pointerId);
+  }
+
+  function onPointerMove(e) {
+    if (!isDragging || e.pointerId !== activePointerId) return;
+
+    const delta = e.clientX - dragStartX;
+    if (Math.abs(delta) > 3) dragMoved = true;
+
+    const maxOffset = getMaxOffset();
+    const newOffset = Math.min(Math.max(dragStartOffset - delta, 0), maxOffset);
+    track.style.transform = `translateX(-${newOffset}px)`;
+  }
+
+  function endDrag(e) {
+    if (!isDragging || e.pointerId !== activePointerId) return;
+    isDragging = false;
+
+    viewport.classList.remove("is-dragging");
+    track.classList.remove("is-dragging");
+
+    const delta = e.clientX - dragStartX;
+
+    if (peekModeQuery.matches) {
+      const threshold = getStep() * 0.15;
+      if (delta < -threshold) {
+        index = Math.min(index + 1, slides.length - 1);
+      } else if (delta > threshold) {
+        index = Math.max(index - 1, 0);
+      }
+    } else {
+      offset = dragStartOffset - delta;
+    }
+
+    update();
+  }
+
+  viewport.addEventListener("pointerdown", onPointerDown);
+  viewport.addEventListener("pointermove", onPointerMove);
+  viewport.addEventListener("pointerup", endDrag);
+  viewport.addEventListener("pointercancel", endDrag);
+
+  viewport.addEventListener("click", (e) => {
+    if (dragMoved) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, true);
+
   update();
 });
 
