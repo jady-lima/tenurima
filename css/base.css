@@ -1988,6 +1988,10 @@ h3 {
   width: 100%;
   padding-inline: var(--space-16);
   font-family: var(--font-secondary);
+  color: #8A3E2D;
+}
+
+.pricing-card--basic .pricing-price-per-bottle {
   color: #A93F48;
 }
 
@@ -2018,6 +2022,7 @@ h3 {
 }
 
 .pricing-benefits {
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
@@ -2028,17 +2033,18 @@ h3 {
 .pricing-benefits li {
   display: flex;
   align-items: center;
-  gap: var(--space-10);
+  gap: 0.56em;
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: clamp(9px, 7cqw, 18px);
+  line-height: 1.25;
   color: #736467;
+  white-space: nowrap;
 }
 
 .pricing-benefits img {
-  width: 20px;
-  height: 20px;
+  width: 1.1em;
+  height: 1.1em;
   flex-shrink: 0;
 }
 
@@ -2054,7 +2060,7 @@ h3 {
   max-width: 100%;
   height: 102.79px;
   object-fit: cover;
-  border-radius: 21.98px;
+  border-radius: 7.0008% / 21.387%;
 }
 
 .pricing-cards {
@@ -2099,8 +2105,7 @@ h3 {
   height: 295.21px;
 }
 
-.pricing-card--bundle .pricing-bottles,
-.pricing-card--bundle .pricing-price-per-bottle {
+.pricing-card--bundle .pricing-bottles {
   color: #8A3E2D;
 }
 
@@ -2198,7 +2203,7 @@ h3 {
 
   .pricing-card {
     display: grid;
-    grid-template-columns: minmax(120px, 172px) minmax(0, 1fr);
+    grid-template-columns: minmax(96px, 172px) minmax(120px, 1fr);
     grid-template-areas:
       "header header"
       "bottles price"
@@ -2268,17 +2273,6 @@ h3 {
     grid-area: benefits;
     width: 100%;
     gap: var(--space-8);
-  }
-
-  .pricing-benefits li {
-    gap: 6px;
-    font-size: 13px;
-    line-height: 16px;
-  }
-
-  .pricing-benefits img {
-    width: 14px;
-    height: 14px;
   }
 
   .pricing-card button {
