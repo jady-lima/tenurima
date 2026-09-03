@@ -72,7 +72,7 @@
   /* H1 */
   --text-h1-font: var(--font-primary);
   --text-h1-weight: 700;
-  --text-h1-size: 40px;
+  --text-h1-size: 2.5rem;
   --text-h1-line-height: 130%;
 
   /* H2 */
@@ -99,35 +99,39 @@
   --text-ingredients-size: 16px;
   --text-ingredients-line-height: 130%;
 
-  /* Textos auxiliares */
   --text-auxiliary-font: var(--font-primary);
   --text-auxiliary-weight: 500;
   --text-auxiliary-size: 18px;
-  --text-auxiliary-line-height: 100%;
+  --text-auxiliary-line-height: 22px;
 
-  /* Texto semibold identificado */
   --text-semibold-font: var(--font-primary);
   --text-semibold-weight: 600;
   --text-semibold-size: 18px;
-  --text-semibold-line-height: 100%;
+  --text-semibold-line-height: 22px;
 
   /* Descrição do Hero */
   --text-hero-description-font: var(--font-primary);
   --text-hero-description-weight: 400;
-  --text-hero-description-size: 18px;
-  --text-hero-description-line-height: 100%;
+  --text-hero-description-size: 1.125rem;
+  --text-hero-description-line-height: 22px;
+
+  /* Rating (avaliação por estrelas) */
+  --text-rating-font: var(--font-secondary);
+  --text-rating-weight: 400;
+  --text-rating-size: 1.25rem;
+  --text-rating-line-height: 26px;
 
   /* Texto de garantia (após o botão Order Now) */
   --text-hero-guarantee-font: var(--font-primary);
   --text-hero-guarantee-weight: 500;
-  --text-hero-guarantee-size: 16px;
+  --text-hero-guarantee-size: 1rem;
   --text-hero-guarantee-line-height: 130%;
 
   /* Texto do botão Order Now */
   --text-order-button-font: var(--font-secondary);
   --text-order-button-weight: 600;
   --text-order-button-size: 24px;
-  --text-order-button-line-height: 100%;
+  --text-order-button-line-height: 29px;
 
   /* Quantidade de bottles nos cards de venda */
   --text-bottles-font: var(--font-primary);
@@ -144,7 +148,7 @@
   /* Navegação do header */
   --text-nav-font: var(--font-primary);
   --text-nav-weight: 500;
-  --text-nav-size: 20px;
+  --text-nav-size: 1.25rem;
   --text-nav-line-height: 26px;
 
   /* Texto do logo */
