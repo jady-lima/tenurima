@@ -1571,6 +1571,13 @@ h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+}
+
+.testimonials-slide:nth-child(odd) .testimonial-author {
+  color: #A93F48;
+}
+
+.testimonials-slide:nth-child(even) .testimonial-author {
   color: #CC494A;
 }
 
@@ -1592,11 +1599,37 @@ h3 {
   height: 20px;
 }
 
-.testimonial-image {
+.testimonial-image-frame {
+  position: relative;
+  overflow: hidden;
   flex-shrink: 0;
   width: 226px;
   height: 330px;
+}
+
+.testimonial-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
   object-fit: cover;
+}
+
+/* Crops calibrados por depoimento (Figma) */
+.testimonials-slide:nth-child(1) .testimonial-image {
+  width: 100%;
+  height: 121.72%;
+  top: -20.3%;
+  left: 0;
+}
+
+.testimonials-slide:nth-child(2) .testimonial-image {
+  width: 99.94%;
+  height: 122.73%;
+  top: -22.73%;
+  left: 0;
 }
 
 /* Controls */
@@ -1640,9 +1673,26 @@ h3 {
     gap: 40px;
   }
 
+  .testimonials-heading {
+    max-width: 360px;
+  }
+
   .testimonials-rating {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .testimonials-rating-stars img {
+    width: 129px;
+    height: 24px;
+  }
+
+  .testimonials-rating .rating-score {
+    font-size: 18px;
+  }
+
+  .testimonials-title {
+    font-size: 32px;
   }
 
   .testimonials-carousel {
@@ -1652,12 +1702,16 @@ h3 {
 
   .testimonials-track {
     align-items: flex-start;
-    gap: 12px;
+    gap: 32px;
+  }
+
+  .testimonials-slide:last-child {
+    margin-right: 6px;
   }
 
   .testimonials-slide {
     width: 80%;
-    max-width: 310px;
+    max-width: 355px;
   }
 
   .testimonial-card {
@@ -1671,11 +1725,24 @@ h3 {
     padding-bottom: 40px;
   }
 
-  .testimonial-image {
+  .testimonial-image-frame {
     width: 355px;
     max-width: 100%;
     height: 310px;
-    object-position: center 25%;
+  }
+
+  .testimonials-slide:nth-child(1) .testimonial-image {
+    width: 100.14%;
+    height: 203.82%;
+    top: -34%;
+    left: -0.14%;
+  }
+
+  .testimonials-slide:nth-child(2) .testimonial-image {
+    width: 100.8%;
+    height: 202.5%;
+    top: -65.41%;
+    left: -0.3%;
   }
 
   .testimonial-content {
@@ -1713,13 +1780,6 @@ h3 {
     width: 100%;
     height: auto;
     gap: var(--space-8);
-  }
-
-  .testimonial-author {
-    font-family: "Poppins", var(--font-secondary), sans-serif;
-    font-weight: 500;
-    line-height: 100%;
-    color: #A93F48;
   }
 
   .testimonial-badge {
