@@ -992,7 +992,22 @@ h3 {
    ========================================================================== */
 
 .ingredients {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
   padding-block: 80px;
+}
+
+.ingredients-lines {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  z-index: -1;
+  width: 1920px;
+  max-width: none;
+  height: 1370px;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .ingredients-container {
@@ -1029,11 +1044,20 @@ h3 {
   color: #CC494A;
 }
 
+.ingredients-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
 .ingredients-list {
   display: grid;
-  grid-template-columns: repeat(3, 385px);
+  grid-template-columns: repeat(3, minmax(0, 385px));
   justify-content: center;
-  gap: 40px;
+  row-gap: 96px;
+  column-gap: 32px;
 }
 
 .ingredient-card {
@@ -1042,7 +1066,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: var(--space-24);
-  width: 385px;
+  width: 100%;
   height: 310px;
   padding: 80px var(--space-40) var(--space-40);
   border-radius: var(--radius-card);
@@ -1052,10 +1076,11 @@ h3 {
 
 .ingredient-socket {
   position: absolute;
-  top: -2px;
-  left: 77px;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 231px;
-  height: 64px;
+  height: 60px;
   opacity: 1;
   z-index: 0;
   pointer-events: none;
@@ -1063,12 +1088,12 @@ h3 {
 
 .ingredient-card img:not(.ingredient-socket) {
   position: absolute;
-  top: -35px;
+  top: -60px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  width: 88px;
-  height: 88px;
+  width: 104px;
+  height: 104px;
   border-width: 0;
 }
 
@@ -1094,15 +1119,30 @@ h3 {
   color: #736467;
 }
 
+@media (max-width: 1440px) {
+  .ingredients-list {
+    grid-template-columns: repeat(2, minmax(0, 385px));
+  }
+
+  .ingredient-card {
+    height: auto;
+  }
+}
+
 @media (max-width: 900px) {
+  .ingredients-intro h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
   .ingredients-list {
     grid-template-columns: 1fr;
     justify-content: stretch;
   }
 
-  .ingredient-card {
-    width: 100%;
-    height: auto;
+  .ingredient-content h3 {
+    font-size: 20px;
   }
 }
 
