@@ -762,29 +762,42 @@ h3 {
 .about-mask {
   position: absolute;
   z-index: -1;
+  opacity: 0.4;
+  pointer-events: none;
+  object-fit: cover;
+  max-width: none;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 14%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 14%);
+  -webkit-mask-mode: alpha;
+          mask-mode: alpha;
+}
+
+.about-mask--desktop {
   top: 58px;
   left: -154px;
   width: 969px;
   height: 389px;
-  object-fit: cover;
-  opacity: 0.4;
-  pointer-events: none;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
+.about-mask--mobile {
+  display: none;
 }
 
 .about-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  gap: var(--space-40);
+  padding-left: 13.625%;
+  gap: 6.4375%;
 }
 
 .about-media {
   flex: 1 1 480px;
+  min-width: 0;
   max-width: 570px;
   aspect-ratio: 570 / 431;
+  position: relative;
 }
 
 .about-composition {
@@ -794,8 +807,17 @@ h3 {
   object-fit: contain;
 }
 
+.about-composition--desktop {
+  display: block;
+}
+
+.about-composition--mobile {
+  display: none;
+}
+
 .about-content {
   flex: 1 1 488px;
+  min-width: 0;
   max-width: 488px;
   display: flex;
   flex-direction: column;
@@ -808,7 +830,7 @@ h3 {
   gap: var(--space-16);
 }
 
-.about-label {
+.about-text .about-label {
   font-family: var(--text-auxiliary-font);
   font-weight: var(--text-auxiliary-weight);
   font-size: var(--text-auxiliary-size);
@@ -836,17 +858,132 @@ h3 {
 }
 
 .about-highlight {
-  font-weight: 500;
+  font-weight: 600;
 }
 
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column-reverse;
+/* ==========================================================================
+   About — tablet (1024 – 1250px): mantém layout desktop em linha, compactado
+   ========================================================================== */
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+  .about {
+    padding-block: 60px;
   }
 
-  .about-media,
+  .about-mask--desktop {
+    top: 40px;
+    left: -120px;
+    width: 720px;
+    height: 290px;
+  }
+
+  .about-container {
+    padding-left: 8%;
+    gap: 4%;
+  }
+
+  .about-media {
+    flex: 1 1 380px;
+    max-width: 440px;
+    aspect-ratio: 570 / 431;
+  }
+
   .about-content {
-    max-width: 100%;
+    flex: 1 1 400px;
+    max-width: 420px;
+    gap: var(--space-32);
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    gap: var(--space-12);
+  }
+
+  .about-content .btn-order {
+    padding: 1rem 4rem;
+  }
+}
+
+/* ==========================================================================
+   About — composição mobile (frame 1-2610, referência 540px)
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+  .about {
+    padding-block: 5.5rem;
+  }
+
+  .about-mask--desktop {
+    display: none;
+  }
+
+  .about-mask--mobile {
+    display: block;
+    top: 635px;
+    left: 50%;
+    width: 862px;
+    height: 346.04541015625px;
+    transform: translateX(-50%) rotate(0deg);
+    margin-left: -20%;
+    opacity: 0.4;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    gap: 1.5625rem;
+  }
+
+  .about-content {
+    order: -1;
+    flex: none;
+    width: 100%;
+    max-width: 22.0625rem;
+    margin-inline: auto;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-content .btn-order {
+    width: 100%;
+    padding:
+      clamp(0.75rem, 0.5rem + 1vw, 1.125rem)
+      clamp(1.5rem, -4rem + 25vw, 6.5rem);
+    margin: 1rem;
+    font-size: clamp(1rem, 0.333rem + 3vw, 1.5rem);
+    line-height: 1;
+    gap: clamp(0.5rem, 0.333rem + 0.75vw, 1rem);
+    border-bottom-width: clamp(4px, 0.167rem + 0.5vw, 6px);
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .about-content .btn-order img {
+    width: clamp(16px, 0.667rem + 2vw, 24px);
+    height: clamp(16px, 0.667rem + 2vw, 24px);
+    flex: 0 0 auto;
+  }
+
+  .about-media {
+    flex: none;
+    width: 100%;
+    max-width: 25.9542rem;
+    aspect-ratio: 415.27 / 314;
+    margin-inline: auto;
+  }
+
+  .about-composition--desktop {
+    display: none;
+  }
+
+  .about-composition--mobile {
+    display: block;
   }
 }
 
