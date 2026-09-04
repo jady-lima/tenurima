@@ -23,15 +23,7 @@ Nenhuma dependência externa, build step ou gerenciador de pacotes é necessári
 
 ## Como rodar
 
-Não há instalação nem build. Basta abrir `index.html` diretamente no navegador, ou servir a pasta com um servidor estático (recomendado, para o `loading="lazy"` e caminhos relativos funcionarem exatamente como em produção):
-
-```bash
-npx serve .
-# ou
-python -m http.server 8080
-```
-
-Depois acesse `http://localhost:8080` (ou a porta indicada pelo terminal).
+Não há instalação nem build. Basta abrir `index.html` diretamente no navegador.
 
 ## Estrutura do projeto
 
