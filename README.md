@@ -38,7 +38,7 @@ Depois acesse `http://localhost:8080` (ou a porta indicada pelo terminal).
 ```
 ├── index.html              # marcação semântica de todas as seções da página
 ├── README.md
-├── DIAGNOSTICO.md           # auditoria da página original (Etapa 1 do desafio)
+├── DIAGNOSTICO.md           # auditoria da página (Etapa 1 do desafio)
 │
 ├── css/
 │   ├── reset.css            # normalizações básicas entre navegadores
@@ -46,7 +46,7 @@ Depois acesse `http://localhost:8080` (ou a porta indicada pelo terminal).
 │   └── base.css              # estilos de layout e componentes de cada seção
 │
 ├── js/
-│   └── main.js               # carrossel de depoimentos, ticker de selos e FAQ
+│   └── main.js               # carrossel de depoimentos e FAQ
 │
 └── assets/
     ├── fonts/                 # Montserrat e Inter em .woff2
