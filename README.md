@@ -86,6 +86,9 @@ O Figma trazia o visual estático das seções, mas não especificava o comporta
 - Adaptação para dark mode.
 - Seção de contato com um formulário, permitindo uma comunicação mais direta com o usuário.
 
+## Link de acesso
+https://tenurima.netlify.app/
+
 ## Licença
 
 Distribuído sob os termos do arquivo [`LICENSE`](./LICENSE).
